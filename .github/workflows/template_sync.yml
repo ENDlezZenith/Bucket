@@ -1,9 +1,12 @@
+name: Template Sync
+
 on:
   schedule:
   - cron: "0 0 1 * *"
   workflow_dispatch:
+
 jobs:
-  repo-sync:
+  template_sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -16,4 +19,4 @@ jobs:
         with:
           source_repo_path: ScoopInstaller/BucketTemplate
           upstream_branch: master
-          pr_labels: template_sync
+          pr_labels: template sync
